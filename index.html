@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ArhiConsult Oltenia S.R.L.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0c;color:#e5e5e5}
+  header{background:linear-gradient(180deg,#0b0b0c, #111);padding:170px 400px 90px; /* TOP  RIGHT/LEFT  BOTTOM */text-align:left;border-bottom:1px solid #c9a227}
+  header h1{margin:0;font-size:48px;font-family:'Playfair Display',serif;color:#fff;letter-spacing:1px}
+  header p{margin:12px 0 0;font-size:20px;color:#d4af37}
+  nav{background:#0e0e10;padding:14px;text-align:center;border-bottom:1px solid #1f1f22}
+  nav a{color:#e5e5e5;margin:0 18px;text-decoration:none;font-weight:500}
+  nav a:hover{color:#d4af37}
+  section{max-width:1200px;margin:auto;padding:80px 20px}
+  h2{font-family:'Playfair Display',serif;font-size:36px;color:#fff;text-align:center;margin-bottom:50px}
+
+  servicii{}
+  servicii p{
+    position:absolute;font-family:'Playfair Display';left:20px;font-size:20px;color:#d4af37;
+  }
+
+  .about{background:#111;border:1px solid #1f1f22;border-radius:18px}
+  .logo {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    width: 20%;
+  }
+
+  /* Slider */
+  .slider{position:relative;overflow:hidden}
+  .slides{display:flex;transition:transform .6s ease}
+  .card{min-width:320px;text-align:center;margin:0 12px;background:#111;border:1px solid #2a2a2e;border-radius:18px;padding:30px;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+  .card h3{margin-top:0;color:#d4af37;font-family:'Playfair Display',serif}
+  .card p{color:#cfcfcf}
+  .controls{text-align:center;margin-top:30px}
+  .btn{background:#d4af37;border:none;color:#000;padding:12px 22px;border-radius:8px;font-weight:600;cursor:pointer;margin:0 8px}
+  .btn:hover{background:#e6c55a}
+
+
+
+/* TITLU */
+.page-title{
+  text-align:center;
+  font-size:44px;
+  margin-bottom:60px;
+  letter-spacing:1px;
+}
+
+/* GRID — mai puține coloane => imagini mai mari */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* CARD PROIECT */
+.project{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+/* IMAGINE — MARE */
+.project img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  display:block;
+  transition:.55s;
+}
+
+/* OVERLAY ALB */
+.project::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0);
+  transition:.35s;
+}
+
+/* TITLU — NEGRU */
+.project-title{
+  position:absolute;
+  bottom:35px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
+  color:#000;          /* TEXT NEGRU */
+  opacity:0;
+  transform:translateY(25px);
+  transition:.35s;
+}
+
+/* HOVER */
+.project:hover img{
+  transform:scale(1.06);
+}
+
+.project:hover::after{
+  background:rgba(255,255,255,0.9);
+}
+
+.project:hover .project-title{
+  opacity:100;
+  color:#000;
+  transform:translateY(0);
+}
+
+  footer{background:#0e0e10;color:#aaa;text-align:center;padding:40px 20px;border-top:1px solid #1f1f22;margin-top:60px}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ArhiConsult Oltenia S.R.L.</h1>
+  <p>De la idee la construcție sigură.</p>
+  <p style="color:#aaa">Calitatea începe din schiță.</p>
+  <img class="logo" src="img\logo.png">
+</header>
+
+<nav>
+  <a href="index.html">Acasă</a>
+  <a href="#despre">Despre</a>
+  <a href="#servicii">Servicii</a>
+  <a href="#contact">Contact</a>
+  <a href="firma.html">Firma noastră</a>
+</nav>
+
+<section id="despre" class="about">
+  <h2>Despre noi</h2>
+  <p style="text-align:center;max-width:800px;margin:auto;color:#cfcfcf">
+<span style="color:#d4af37">ArhiConsult Oltenia S.R.L. <span style="color:#cfcfcf">este o companie de arhitectură și consultanță în construcții orientată spre viitor, care îmbină creativitatea arhitecturală cu cele mai moderne tehnologii disponibile. Ne diferențiem prin integrarea inteligenței artificiale în procesul de proiectare, oferind clienților soluții inovatoare, eficiente și perfect adaptate nevoilor fiecărui proiect.
+<br> </br>
+<span style="color:#d4af37">Misiunea ArhiConsult Oltenia <span style="color:#cfcfcf">este de a introduce sisteme și metode de proiectare unice, nu doar în regiunea Olteniei, ci la nivel național. Prin utilizarea uneltelor specializate de inteligență artificială și a expertizei profesionale, oferim soluții originale pentru orice tip de investiție — de la locuințe individuale până la dezvoltări complexe.
+<br> </br>
+<span style="color:#d4af37">Viziunea ArhiConsult Oltenia <span style="color:#cfcfcf">este de a deveni un reper în domeniul arhitecturii și consultanței tehnice din România, prin utilizarea inteligentă a tehnologiei și a inteligenței artificiale în proiectarea construcțiilor viitorului.
+<br> </br>
+<span style="color:#d4af37">Ne propunem să contribuim <span style="color:#cfcfcf">la dezvoltarea unui mediu construit modern, sustenabil și eficient, în care estetica, funcționalitatea și inovația tehnologică coexistă armonios.
+Valorile care ne definesc sunt inovația, calitatea, responsabilitatea și funcționalitatea, principii care stau la baza fiecărui proiect realizat.
+<br> </br>
+<span style="color:#d4af37">Motto-ul nostru, „Calitatea începe din schiță.”<span style="color:#cfcfcf">, reflectă convingerea că succesul unei construcții este determinat încă din faza de concept, atunci când ideile sunt transformate în planuri clare, coerente și bine fundamentate.
+Utilizarea instrumentelor avansate de AI ne permite să generăm rapid multiple variante de design, să optimizăm funcționalitatea spațiilor și să reducem semnificativ timpii de analiză și execuție. Astfel, beneficiarii noștri iau decizii mai bine fundamentate, obțin costuri optimizate și rezultate durabile, aliniate standardelor actuale din domeniu.
+<br> </br>
+<span style="color:#d4af37">Echipa noastră multidisciplinară <span style="color:#cfcfcf">asigură un control riguros al calității, respectarea normativelor în vigoare și implementarea unor soluții tehnice moderne, capabile să transforme orice concept într-un proiect realizabil, eficient și competitiv.
+<br> </br>
+
+  </p>
+</section>
+
+<section id="servicii">
+  <h2>Serviciile noastre</h2>
+  <p style="text-align:center;font-size:20px;color:#cfcfcf;">De la <span style="color:#d4af37">Arhitectură<span style="color:#cfcfcf">, la <span style="color:#d4af37">Documentație și avizație<span style="color:#cfcfcf">, la <span style="color:#d4af37">Urbanism<span style="color:#cfcfcf"> și <span style="color:#d4af37">Consultanță<span style="color:#cfcfcf">, <b style="color:#d4af37">ArhiConsult</b> vă oferă o gamă variată de servicii!</p>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="card"><h3>Urbanism</h3> <p></p> <p>110 lei/mp</p></div>
+      <div class="card"><h3>Reabilitare clădiri</h3> <p>Readucem la viață clădiri vechi.</p> <p>Solicită oferta.</p></div>
+      <div class="card"><h3>Consultanță investițională</h3> <p>Este viabil spațiul pe care vrei să îl construiești?</p> <p>2.000 lei</p></div>
+      <div class="card"><h3>Proiectare arhitecturală completă</h3> <p>Planuri, 3D, documentație pentru autorizație</p> <p>5.000 - 15.000 lei</p></div>
+      <div class="card"><h3>Design interior & exterior</h3> <p>Amenajări interioare și fațade</p> <p>2.000 - 18.000 lei</p></div>
+      <div class="card"><h3>Consultanță urbanism & reglementări</h3> <p>Verificarea normativelor și autorizărilor</p> <p>2.500 lei</p></div>
+      <div class="card"><h3>Proiecte sustenabile</h3><p>Design eficient energetic, eco-design</p> <p>+10–30% față de preț proiect standard</p></div>
+      <div class="card"><h3>Modelare & simulări digitale (BIM + AI)</h3> <p>Vizualizări 3D, simulări funcționale</p> <p>1.500 – 5.000 lei</p></div>
+      <div class="card"><h3>Generare concepte AI</h3> <p>Multiple variante design automatizate</p> <p>700 – 2.000 lei</p></div>
+      <div class="card"><h3>Analiză fluxuri arhitecturale AI</h3> <p>Trafic, luminozitate, ventilare, utilizarea spațiului</p> <p>1.000 – 3.000 lei</p></div>
+      <div class="card"><h3>Suport execuție & monitorizare</h3> <p>Verificarea conformității și consultanță pe șantier</p> <p>1.000 – 4.000 lei</p></div>
+
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn" onclick="prevSlide()">◀</button>
+    <button class="btn" onclick="nextSlide()">▶</button>
+  </div>
+</section>
+
+<h1 class="page-title">Proiectele Noastre</h1>
+
+<div class="projects">
+
+  <a href="solaris.html" class="project">
+    <img src="proiecte/solaris/solaris.png">
+    <div class="project-title">Ansamblu rezidențial „SOLARIS RESIDENCE”</div>
+  </a>
+
+  <a href="bridge.html" class="project">
+    <img src="proiecte/the bridge/bridge.png">
+    <div class="project-title">The Bridge Offices</div>
+  </a>
+
+  <a href="proiect3.html" class="project">
+    <img src="img/actualizare.png">
+    <div class="project-title">IN CURS DE ACTUALIZARE!</div>
+  </a>
+
+  <a href="proiect4.html" class="project">
+    <img src="img/actualizare.png">
+    <div class="project-title">IN CURS DE ACTUALIZARE!</div>
+  </a>
+</div>
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="text-align:center;color:#cfcfcf">Telefon: +40 737 743 508 • Email: office@arhiconsultoltenia.ro •<br> Strada Vântului nr. 1A, bloc J4, sc. 2, ap. 15, mun. Craiova, jud. Dolj, România</p>
+</section>
+
+<footer>
+  <p>© 2026 ArhiConsult Oltenia S.R.L. — Toate drepturile rezervate — Proiect realizat sub îndrumarea doamnei profesoară Osman Maria-Magdalena de la Colegiul Național ”Carol I”, Craiova.</p>
+</footer>
+
+<script>
+  let index = 0;
+  const slides = document.getElementById('slides');
+
+  function update(){
+    slides.style.transform = `translateX(${-index * 344}px)`;
+  }
+
+  function nextSlide(){
+    if(index < 6) index++;
+    update();
+  }
+
+  function prevSlide(){
+    if(index > 0) index--;
+    update();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ArhiConsult Oltenia S.R.L.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#0b0b0c;
+    color:#e5e5e5;
+  }
+    footer{background:#0e0e10;color:#aaa;text-align:center;padding:40px 20px;border-top:1px solid #1f1f22;margin-top:60px}
+
+  /* HEADER IDENTIC */
+  header{
+    background:linear-gradient(180deg,#0b0b0c, #111);
+    padding:170px 400px 90px;
+    text-align:left;
+    border-bottom:1px solid #c9a227;
+    position:relative;
+  }
+
+  header h1{
+      .about{background:#111;border:1px solid #1f1f22;border-radius:18px};
+    margin:10px;   
+    font-size:48px;
+    font-family:'Playfair Display',serif;
+    color:#fff;
+    letter-spacing:1px;
+  }
+
+  header p{
+    margin:12px 0 0;
+    font-size:20px;
+    color:#d4af37;
+  }
+   section{max-width:1200px;margin:auto;padding:80px 20px}
+ h2{font-family:'Playfair Display',serif;font-size:36px;color:#fff;text-align:center;margin-bottom:50px}
+   .about{background:#111;border:1px solid #1f1f22;border-radius:18px; padding:100px;}
+   .juridic{background:#111;border:1px solid #1f1f22;border-radius:18px; padding:50px;}
+  .logo{
+    position:absolute;
+    left:10px;
+    top:-20px;
+    width:20%;
+  }
+
+
+  nav{background:#0e0e10;padding:14px;text-align:center;border-bottom:1px solid #1f1f22}
+  nav a{color:#e5e5e5;margin:0 18px;text-decoration:none;font-weight:500}
+  nav a:hover{color:#d4af37}
+  /* Conținut gol */
+  main{
+    min-height:60vh;
+  }
+
+  /* CARD */
+.founder-card{
+  position:relative;
+  display:flex;
+  max-width:900px;
+  background:#111;
+  border:1px solid #d4af37;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 25px 70px rgba(0,0,0,.8);
+  transition:.35s;
+}
+
+/* HOVER */
+.founder-card:hover{
+  border-color:#ffd700;
+  box-shadow:
+    0 0 35px rgba(212,175,55,.9),
+    0 35px 80px rgba(0,0,0,.9);
+  transform:translateY(-6px);
+}
+
+/* CONTAINER POZA */
+.founder-photo-box{
+  width:300px;
+  background:#000;
+  flex-shrink:0;
+}
+
+/* POZA 9:16 FULL */
+.founder-photo{
+  width:100%;
+  height:100%;
+  object-fit:contain; /* ← IMPORTANT: NU taie poza */
+  background:#000;
+}
+
+/* TEXT */
+.founder-info{
+  padding:35px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* NUME */
+.founder-name{
+  font-size:28px;
+  color:#fff;
+  margin-bottom:8px;
+  font-weight:bold;
+}
+
+/* FUNCTIE */
+.founder-role{
+  color:#d4af37;
+  font-size:16px;
+  margin-bottom:20px;
+}
+
+/* DESCRIERE LUNGĂ */
+.founder-desc{
+  font-size:15px;
+  line-height:1.7;
+  color:#d0d0d0;
+  max-width:520px;
+}
+.team{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  flex-wrap:wrap; /* important pentru responsive */
+}
+
+
+/* ORGANIGRAMA */
+/* TITLU */
+.title{
+  text-align:center;
+  color:#d4af37;
+  margin-bottom:60px;
+  font-size:32px;
+}
+
+/* CONTAINER GENERAL */
+.org{
+  position:relative;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* LINIE ORIZONTALĂ CONDUCERE */
+.board-line{
+  position:absolute;
+  top:95px;
+  left:5%;
+  right:5%;
+  height:2px;
+  background:#d4af37;
+}
+
+/* ZONA FONDATORI */
+.board{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  position:relative;
+  margin-bottom:40px;
+}
+
+/* COLOANĂ DEPARTAMENT */
+.column{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  position:relative;
+  width:22%;
+  transition:.35s;
+}
+
+/* LINIE VERTICALĂ */
+.column::after{
+  content:"";
+  position:absolute;
+  top:90px;
+  width:2px;
+  height:calc(100% - 110px);
+  background:#d4af37;
+  z-index:0;
+}
+
+/* CUTIE */
+.box{
+  background:#111;
+  border:1px solid #d4af37;
+  border-radius:14px;
+  padding:14px 18px;
+  margin:14px 0;
+  text-align:center;
+  font-weight:bold;
+  width:200px;
+  box-shadow:0 10px 28px rgba(0,0,0,.7);
+  position:relative;
+  z-index:2;
+  transition:.3s;
+}
+
+/* TEXT MIC */
+.box span{
+  font-weight:normal;
+  font-size:12px;
+  color:#cfcfcf;
+}
+
+/* HOVER PREMIUM PE COLOANĂ */
+.column:hover .box{
+  border-color:#ffd700;
+  color:#ffd700;
+  box-shadow:
+    0 0 25px rgba(212,175,55,.9),
+    0 0 45px rgba(212,175,55,.35) inset;
+  transform:translateY(-2px);
+}
+
+/* ELIMINĂ LINIA DACĂ NU EXISTĂ SUBORDONAȚI */
+.column:has(.box:nth-child(1):last-child)::after{
+  display:none;
+}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .board{
+    flex-wrap:wrap;
+    gap:50px;
+    justify-content:center;
+  }
+
+  .column{
+    width:45%;
+  }
+
+  .board-line{
+    display:none;
+  }
+
+
+
+
+
+acte {align-items:center;}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>ArhiConsult Oltenia S.R.L.</h1>
+  <p>De la idee la construcție sigură.</p>
+  <p style="color:#aaa">Calitatea începe din schiță.</p>
+
+  <img class="logo" src="img\logo.png">
+</header>
+
+<nav>
+  <a href="index.html">Acasă</a>
+  <a href="index.html#despre">Despre</a>
+  <a href="index.html#servicii">Servicii</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="firma.html">Firma noastră</a>
+</nav>
+
+<main>
+<section id="despre" class="about">
+  <h2>Meet the founders!</h2>
+  <p style="font-size:130%;text-align:center;max-width:800px;margin:auto;color:#cfcfcf">
+<span style="color:#d4af37">ArhiConsult Oltenia S.R.L. <span style="color:#cfcfcf">s-a născut dintr-o viziune comună asupra responsabilității pe care arhitectura o are față de comunitate și mediul construit. Fondatorii companiei au unit experiențe profesionale diverse pentru a crea o organizație capabilă să ofere soluții integrate, bazate pe rigoare tehnică, inovație și respect pentru durabilitate.
+  </p>
+</section>
+
+
+<div class="team">
+
+<div class="founder-card">
+
+  <!-- POZA -->
+  <div class="founder-photo-box">
+    <img src="img/petru.jpg" alt="Petru Rădulescu" class="founder-photo">
+  </div>
+
+  <!-- TEXT -->
+  <div class="founder-info">
+
+    <div class="founder-name">Petru Rădulescu</div>
+
+    <div class="founder-role">
+      Fondator & Șef Departament Administrativ și Tehnic
+    </div>
+
+    <div class="founder-desc">
+      Petru Rădulescu este cofondator al ArhiConsult Oltenia S.R.L. și coordonează
+      activitatea administrativă și tehnică a companiei. Cu o viziune orientată
+      spre eficiență operațională și stabilitate pe termen lung, el gestionează
+      infrastructura IT, procesele interne și suportul logistic necesar
+      desfășurării proiectelor complexe de arhitectură și inginerie.
+
+      Experiența sa în management tehnic și organizare instituțională contribuie
+      decisiv la funcționarea coerentă a echipelor multidisciplinare și la
+      implementarea standardelor de calitate în toate etapele proiectelor.
+      Prin abordarea sa pragmatică și orientată către soluții, asigură un cadru
+      solid pentru dezvoltarea durabilă a companiei.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="founder-card">
+
+  <!-- POZA -->
+  <div class="founder-photo-box">
+    <img src="img/denis.png" alt="Denis Canareica" class="founder-photo">
+  </div>
+
+  <!-- TEXT -->
+  <div class="founder-info">
+
+    <div class="founder-name">Denis Canareica</div>
+
+    <div class="founder-role">
+      Fondator & Șef Departament de Proiectare și Control al Calității
+    </div>
+
+    <div class="founder-desc">
+Denis Canareica coordonează activitatea de proiectare arhitecturală și supraveghează respectarea standardelor tehnice și de calitate în toate etapele de dezvoltare a proiectelor. Cu o abordare riguroasă și orientată către detalii, el asigură coerența soluțiilor tehnice, conformitatea cu normele în vigoare și integrarea eficientă a cerințelor funcționale și estetice.
+
+Experiența sa în gestionarea proiectelor complexe contribuie la optimizarea fluxurilor de lucru și la menținerea unui nivel constant de excelență profesională. Prin capacitatea de a coordona echipe multidisciplinare, facilitează colaborarea dintre arhitecți, ingineri și consultanți, garantând livrarea unor soluții durabile, sigure și bine fundamentate din punct de vedere tehnic.
+    </div>
+
+  </div>
+
+</div>
+
+<div class="founder-card">
+
+  <!-- POZA -->
+  <div class="founder-photo-box">
+    <img src="img/cristi.png" alt="Cristian Palamara" class="founder-photo">
+  </div>
+
+  <!-- TEXT -->
+  <div class="founder-info">
+
+    <div class="founder-name">Cristian Palamara</div>
+
+    <div class="founder-role">
+      Fondator & Șef Departament de Proiectare cu Inteligență Artificială
+    </div>
+
+    <div class="founder-desc">
+Cristian Palamara conduce departamentul dedicat integrării tehnologiilor avansate și a inteligenței artificiale în procesul de proiectare. Activitatea sa vizează dezvoltarea și implementarea instrumentelor digitale care optimizează conceperea, simularea și evaluarea soluțiilor arhitecturale, reducând timpul de execuție și crescând precizia rezultatelor.
+
+Prin expertiza sa în inginerie software și sisteme inteligente, contribuie la transformarea modului tradițional de proiectare într-un proces digitalizat, bazat pe date și algoritmi performanți. Viziunea sa strategică urmărește adaptarea continuă a companiei la evoluția tehnologică globală și poziționarea acesteia în avangarda inovării în domeniul arhitecturii asistate de inteligență artificială.
+
+  </div>
+
+</div>
+</div>
+<div class="founder-card">
+
+  <!-- POZA -->
+  <div class="founder-photo-box">
+    <img src="img/marius.png" alt="Marius Caracudă" class="founder-photo">
+  </div>
+
+  <!-- TEXT -->
+  <div class="founder-info">
+
+    <div class="founder-name">Marius Caracudă</div>
+
+    <div class="founder-role">
+      Fondator & Șef Departament HR
+    </div>
+
+    <div class="founder-desc">
+Marius Caracudă coordonează strategia de resurse umane a companiei, fiind responsabil de dezvoltarea organizațională, recrutarea personalului și menținerea unui climat de lucru stabil și performant. Printr-o abordare orientată către oameni și eficiență instituțională, el asigură alinierea politicilor de personal la obiectivele strategice ale companiei.
+
+Activitatea sa include gestionarea proceselor de evaluare profesională, formare continuă și sănătate și securitate în muncă, contribuind la consolidarea unei culturi organizaționale bazate pe responsabilitate, profesionalism și colaborare. Prin implicarea directă în dinamica echipelor, susține dezvoltarea durabilă a capitalului uman și stabilitatea pe termen lung a organizației.
+    </div>
+
+  </div>
+
+</div>
+
+
+
+</div>
+
+
+
+<h1 style="text-align:center;">ORGANIGRAMA FIRMEI</h1>
+<div class="org">
+
+  <div class="board-line"></div>
+
+  <div class="board">
+
+    <!-- ADMINISTRATIV & TEHNIC -->
+    <div class="column">
+      <div class="box">
+        Petru Rădulescu<br>
+        <span>Fondator & Șef Departament Administrativ și Tehnic</span>
+      </div>
+
+      <div class="box">Ion Ionuț<br><span>Avocat</span></div>
+      <div class="box">Marian Dumitrescu<br><span>Avocat</span></div>
+      <div class="box">Gheorghe Lupu<br><span>Inginer de Sistem</span></div>
+    </div>
+
+    <!-- PROIECTARE & CALITATE -->
+    <div class="column">
+      <div class="box">
+        Denis Canareica<br>
+        <span>Fondator & Șef Departament Proiectare & Control Calitate</span>
+      </div>
+
+      <div class="box">Maria Ioana<br><span>Arhitect</span></div>
+      <div class="box">Darius Sandu<br><span>Arhitect</span></div>
+      <div class="box">Costică Zamfir<br><span>Inginer Constructor</span></div>
+    </div>
+
+    <!-- PROIECTARE AI -->
+    <div class="column">
+      <div class="box">
+        Cristian Palamara<br>
+        <span>Fondator & Șef Departament Proiectare AI</span>
+      </div>
+
+      <div class="box">Valentin Marius<br><span>Inginer Software</span></div>
+      <div class="box">Rus Benianim<br><span>Inginer Software</span></div>
+    </div>
+
+    <!-- HR -->
+    <div class="column">
+      <div class="box">
+        Marius Caracudă<br>
+        <span>Fondator & Șef Departament Resurse Umane</span>
+      </div>
+
+      <div class="box">Ioan Popescu<br><span>HR Manager</span></div>
+      <div class="box">Iancu Raluca<br><span>HR Generalist</span></div>
+      <div class="box">Victor Petrescu<br><span>Coordonator SSM</span></div>
+    </div>
+
+  </div>
+</div>
+
+<section class="acte">
+<h1 style="text-align:center;">ACTE DE INTERES PUBLIC</h1>
+<iframe width=45% height=1080px src="acte/Regulament de ordine interioara.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/Fise Post Angajati.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/1. Cerere de verificare disponibilitate si rezervare denumire firma.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/2. Cerere inregistrare in reg comertului.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/3. anexa 1.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/4.a. petru.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/4.b. denis" alt="4.b. Declaratie pe propria raspundere Denis"></iframe>
+<iframe width=45% height=1080px src="acte/4.c. marius.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/4.d. cristi.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/prestudiul de piata.pdf"></iframe>
+<iframe width=45% height=1080px src="acte/Strategie marketing.pdf"></iframe>
+<p> Lista actelor este în curs de actualizare! </p>
+</section>
+<section id="juridic" class="juridic">
+<h1 style="text-align:center;">INFORMAȚII JURIDICE</h1>
+<p style="text-align:center;">
+C.U.I.: 34262413<br>
+Nr. înreg. Reg. Comerțului:F16/25/2025<br>
+Sediu Social: Strada Vântului nr. 1A, bloc J4, sc. 2, ap. 15<br>
+Nr. de telefon: +40 737 743 508<br>
+</p>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 ArhiConsult Oltenia S.R.L. — Toate drepturile rezervate — Proiect realizat sub îndrumarea doamnei profesoară Osman Maria-Magdalena de la Colegiul Național ”Carol I”, Craiova.</p>
+</footer>
+
+</body>
+</html>

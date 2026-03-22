@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<title>Proiectele Noastre</title>
+
+<style>
+
+body{
+  margin:0;
+  background:#0b0b0c;
+  font-family:Inter, sans-serif;
+  color:#fff;
+  padding:70px 60px;
+}
+
+/* TITLU */
+.page-title{
+  text-align:center;
+  font-size:44px;
+  margin-bottom:60px;
+  letter-spacing:1px;
+}
+
+/* GRID — mai puține coloane => imagini mai mari */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+/* CARD PROIECT */
+.project{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+/* IMAGINE — MARE */
+.project img{
+  width:100%;
+  height:520px;
+  object-fit:cover;
+  display:block;
+  transition:.55s;
+}
+
+/* OVERLAY ALB */
+.project::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0);
+  transition:.35s;
+}
+
+/* TITLU — NEGRU */
+.project-title{
+  position:absolute;
+  bottom:35px;
+  left:0;
+  right:0;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
+  color:#000;          /* TEXT NEGRU */
+  opacity:0;
+  transform:translateY(25px);
+  transition:.35s;
+}
+
+/* HOVER */
+.project:hover img{
+  transform:scale(1.06);
+}
+
+.project:hover::after{
+  background:rgba(255,255,255,0.9);
+}
+
+.project:hover .project-title{
+  opacity:100;
+  color:#000;
+  transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1 class="page-title">Proiectele Noastre</h1>
+
+<div class="projects">
+
+  <a href="solaris.html" class="project">
+    <img src="proiecte/solaris/solaris.png">
+    <div class="project-title">Ansamblu rezidențial „SOLARIS RESIDENCE”</div>
+  </a>
+
+  <a href="bridge.html" class="project">
+    <img src="proiecte/the bridge/bridge.png">
+    <div class="project-title">The Bridge Offices</div>
+  </a>
+
+  <a href="proiect3.html" class="project">
+    <img src="img/proiect3.jpg">
+    <div class="project-title">Centru Medical Modern</div>
+  </a>
+
+  <a href="proiect4.html" class="project">
+    <img src="img/proiect4.jpg">
+    <div class="project-title">Complex Birouri Premium</div>
+  </a>
+</div>
+
+<h2>Vizualizare Document</h2>
+<iframe src="acte/Regulament de ordine interioara.pdf" width="100%" height="800px" style="border:1px solid #d4af37;"></iframe>
+
+</body>
+</html>
