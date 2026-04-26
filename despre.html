@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ArhiConsult Oltenia S.R.L.</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;font-family:'Inter',sans-serif;background:#0b0b0c;color:#e5e5e5}
+  header{background:linear-gradient(180deg,#0b0b0c, #111);padding:170px 400px 90px; /* TOP  RIGHT/LEFT  BOTTOM */text-align:left;border-bottom:1px solid #c9a227}
+  header h1{margin:0;font-size:48px;font-family:'Playfair Display',serif;color:#fff;letter-spacing:1px}
+  header p{margin:12px 0 0;font-size:20px;color:#d4af37}
+  nav{background:#0e0e10;padding:14px;text-align:center;border-bottom:1px solid #1f1f22}
+  nav a{color:#e5e5e5;margin:0 18px;text-decoration:none;font-weight:500}
+  nav a:hover{color:#d4af37}
+  section{max-width:1200px;margin:auto;padding:80px 20px}
+  h2{font-family:'Playfair Display',serif;font-size:36px;color:#fff;text-align:center;margin-bottom:50px}
+  descriere{}
+  .paragraf-descriere{text-align:center;}
+  servicii{}
+  servicii p{
+    position:absolute;font-family:'Playfair Display';left:20px;font-size:20px;color:#d4af37;
+  }
+
+  .about{background:#111;border:1px solid #1f1f22;border-radius:18px}
+  .logo {
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    width: 20%;
+  }
+
+  /* Slider */
+  .slider{position:relative;overflow:hidden}
+  .slides{display:flex;transition:transform .6s ease}
+  .card{min-width:320px;text-align:center;margin:0 12px;background:#111;border:1px solid #2a2a2e;border-radius:18px;padding:30px;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+  .card h3{margin-top:0;color:#d4af37;font-family:'Playfair Display',serif}
+  .card p{color:#cfcfcf}
+  .controls{text-align:center;margin-top:30px}
+  .btn{background:#d4af37;border:none;color:#000;padding:12px 22px;border-radius:8px;font-weight:600;cursor:pointer;margin:0 8px}
+  .btn:hover{background:#e6c55a}
+
+  footer{background:#0e0e10;color:#aaa;text-align:center;padding:40px 20px;border-top:1px solid #1f1f22;margin-top:60px}
+
+
+  /* ===== GALERIE ===== */
+
+.gallery{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.gallery img{
+  width:520px;
+  max-width:100%;
+  border-radius:14px;
+  border:1px solid #2a2a2e;
+  cursor:zoom-in;
+  transition:.35s;
+}
+
+/* Hover alb premium */
+.gallery img:hover{
+  filter:brightness(1.15);
+  box-shadow:
+    0 0 40px rgba(255,255,255,.35),
+    0 20px 60px rgba(0,0,0,.8);
+  transform:translateY(-6px);
+}
+
+/* ===== LIGHTBOX ===== */
+
+#lightbox{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.92);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  cursor:zoom-out;
+}
+
+#lightbox img{
+  max-width:92%;
+  max-height:92%;
+  border-radius:12px;
+  box-shadow:0 0 80px rgba(0,0,0,.9);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ArhiConsult Oltenia S.R.L.</h1>
+  <p>De la idee la construcție sigură.</p>
+  <p style="color:#aaa">Calitatea începe din schiță.</p>
+  <img class="logo" src="img\logo.png">
+</header>
+
+<nav>
+  <a href="index.html">Acasă</a>
+  <a href="despre.html">Despre</a>
+  <a href="index.html#servicii">Servicii</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="firma.html">Firma noastră</a>
+</nav>
+
+<main>
+
+<section id="despre" class="about">
+  <h2>Despre noi</h2>
+  <p style="text-align:center;max-width:800px;margin:auto;color:#cfcfcf">
+<span style="color:#d4af37">ArhiConsult Oltenia S.R.L. <span style="color:#cfcfcf">este o companie de arhitectură și consultanță în construcții orientată spre viitor, care îmbină creativitatea arhitecturală cu cele mai moderne tehnologii disponibile. Ne diferențiem prin integrarea inteligenței artificiale în procesul de proiectare, oferind clienților soluții inovatoare, eficiente și perfect adaptate nevoilor fiecărui proiect.
+<br> </br>
+<span style="color:#d4af37">Misiunea ArhiConsult Oltenia <span style="color:#cfcfcf">este de a introduce sisteme și metode de proiectare unice, nu doar în regiunea Olteniei, ci la nivel național. Prin utilizarea uneltelor specializate de inteligență artificială și a expertizei profesionale, oferim soluții originale pentru orice tip de investiție — de la locuințe individuale până la dezvoltări complexe.
+<br> </br>
+<span style="color:#d4af37">Viziunea ArhiConsult Oltenia <span style="color:#cfcfcf">este de a deveni un reper în domeniul arhitecturii și consultanței tehnice din România, prin utilizarea inteligentă a tehnologiei și a inteligenței artificiale în proiectarea construcțiilor viitorului.
+<br> </br>
+<span style="color:#d4af37">Ne propunem să contribuim <span style="color:#cfcfcf">la dezvoltarea unui mediu construit modern, sustenabil și eficient, în care estetica, funcționalitatea și inovația tehnologică coexistă armonios.
+Valorile care ne definesc sunt inovația, calitatea, responsabilitatea și funcționalitatea, principii care stau la baza fiecărui proiect realizat.
+<br> </br>
+<span style="color:#d4af37">Motto-ul nostru, „Calitatea începe din schiță.”<span style="color:#cfcfcf">, reflectă convingerea că succesul unei construcții este determinat încă din faza de concept, atunci când ideile sunt transformate în planuri clare, coerente și bine fundamentate.
+Utilizarea instrumentelor avansate de AI ne permite să generăm rapid multiple variante de design, să optimizăm funcționalitatea spațiilor și să reducem semnificativ timpii de analiză și execuție. Astfel, beneficiarii noștri iau decizii mai bine fundamentate, obțin costuri optimizate și rezultate durabile, aliniate standardelor actuale din domeniu.
+<br> </br>
+<span style="color:#d4af37">Echipa noastră multidisciplinară <span style="color:#cfcfcf">asigură un control riguros al calității, respectarea normativelor în vigoare și implementarea unor soluții tehnice moderne, capabile să transforme orice concept într-un proiect realizabil, eficient și competitiv.
+<br> </br>
+
+  </p>
+</section>
+<br>
+<section id="poveste" class="about">
+  <h2>Povestea noastră</h2>
+  <p style="text-align:center;max-width:800px;margin:auto;color:#cfcfcf">
+Într-un oraș în care clădirile spuneau mai ales povești vechi, ne-am întrebat cum ar arăta viitorul dacă l-am proiecta chiar noi. Totul a început într-o seară obișnuită, în jurul unei mese simple, cu schițe împrăștiate și idei desenate pe colțuri de foi, unde fiecare dintre noi a venit cu ceva diferit: viziune, atenție la detalii tehnice, pragmatism și capacitatea de a vedea impactul asupra oamenilor.
+<br> </br>
+Nu vorbeam doar despre clădiri, ci despre cum spațiile influențează starea, productivitatea și visurile celor care le folosesc. Așa a luat naștere ArhiConsult Oltenia S.R.L., nu ca o simplă firmă de arhitectură, ci ca un răspuns la nevoia reală de a îmbina funcționalitatea cu estetica într-un mod relevant.
+<br> </br>
+La început nu aveam portofolii impresionante, dar aveam încredere unii în alții și convingerea că putem schimba perspectiva asupra arhitecturii. Primul nostru proiect a fost mic, dar definitoriu: am ascultat, am înțeles și am creat nu doar o construcție, ci un spațiu care funcționează, inspiră și rezistă.
+<br> </br>
+De atunci, am crescut pas cu pas, fiecare proiect confirmând că abordarea noastră este diferită, fără șabloane și orientată spre viitor. Astăzi, suntem mai mult decât patru prieteni: suntem o echipă care transformă idei în realitate, îmbinând creativitatea cu precizia și punând omul în centrul fiecărui proiect.
+<br> </br>
+Pentru că, la final, nu construim doar clădiri, ci locuri în care oamenii își trăiesc viața.
+</section>
+  
+</main>
+
+
+
+</body>
+</html>
